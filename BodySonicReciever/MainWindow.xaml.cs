@@ -34,7 +34,11 @@ namespace BodySonicReciever
         {
             InitializeComponent();
 
-            // OSCのレシーバーをポート1234で作る
+        }
+
+        public void LounchOscServer()
+        {
+            // OSCのレシーバーをポート12345で作る
             m_OscReceiver = new OscReceiver(12345);
 
             // OSCのレシーバーを接続
@@ -132,6 +136,7 @@ namespace BodySonicReciever
 
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
+
             bool isErr = false;
 
             try
@@ -146,6 +151,7 @@ namespace BodySonicReciever
                     SerialPort.Encoding = Encoding.ASCII;
                     SerialPort.Open();
                     Console.WriteLine("Connect!");
+                    LounchOscServer();
                 }
                 else
                 {
