@@ -31,7 +31,7 @@ That is, BodySonicReciever uses only the address pattern for receiving commands 
 If you want to send a command with sound ID 12 and LED ID 60 to the module 5-3, you will get the following command.
 
 ~~~
-/5-3-20-0-6 [empty]
+/5-3-12-0-60 [empty]
 ~~~
 
  Strength is usually set to 0. If the value of 1 is set here, the vibration intensity is halved, and each time it is incremented, the vibration intensity is halved. The OSC receiver is open at port 12345, connect the USB module and press the OK button to start the OSC receiver.
